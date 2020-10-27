@@ -3,9 +3,17 @@ import axios from "axios"
 import UserCard from "./components/UserCard"
 
 export default class App extends Component {
-  state={
-    user:[]
+  constructor(){
+    super();
+
+    this.state={
+      user:[]
+    }
   }
+
+  // state={
+  //   user:[]
+  // }
   componentDidMount(){
     axios.get("https://api.github.com/users/DonSutherland95")
       .then((res)=>{
